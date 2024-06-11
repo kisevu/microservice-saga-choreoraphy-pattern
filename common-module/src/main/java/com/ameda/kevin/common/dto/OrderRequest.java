@@ -1,4 +1,4 @@
-package com.ameda.kevin.saga.dto;/*
+package com.ameda.kevin.common.dto;/*
 *
 @author ameda
 @project saga-choreography-microservice

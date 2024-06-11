@@ -1,11 +1,11 @@
-package com.ameda.kevin.saga.dto;/*
+package com.ameda.kevin.common.dto;/*
 *
 @author ameda
 @project saga-choreography-microservice
 *
 */
 
-import com.ameda.kevin.saga.event.OrderStatus;
+import com.ameda.kevin.common.event.OrderStatus;
 
 public class OrderResponse {
 

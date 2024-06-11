@@ -1,4 +1,4 @@
-package com.ameda.kevin.saga;
+package com.ameda.kevin.common;
 
 
 public class CommonModuleApplication

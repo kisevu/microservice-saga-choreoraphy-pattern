@@ -1,17 +1,20 @@
-package com.ameda.kevin.saga.event;/*
+package com.ameda.kevin.common.event;/*
 *
 @author ameda
 @project saga-choreography-microservice
 *
 */
 
-import com.ameda.kevin.saga.dto.PaymentRequest;
+import com.ameda.kevin.common.dto.PaymentRequest;
+import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
 import java.util.UUID;
 
 @NoArgsConstructor
+@Data
 public class PaymentEvent implements Event {
     private UUID eventId = UUID.randomUUID();
     private Date eventDate = new Date();
