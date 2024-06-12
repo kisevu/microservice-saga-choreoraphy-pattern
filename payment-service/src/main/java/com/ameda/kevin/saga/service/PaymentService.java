@@ -50,8 +50,14 @@ public class PaymentService {
                 }).orElse(new PaymentEvent(paymentRequest,PaymentStatus.PAYMENT_FAILED));
     }
 
+    @Transactional
     public void cancelOrderEvent(OrderEvent orderEvent) {
-
+        userTransactionRepository.findById(orderEvent.getOrderRequest().getOrderId())
+                .ifPresent(userTransaction -> {
+                    userTransactionRepository.delete(userTransaction);
+                    userBalanceRepository.findById(userTransaction.getUserId())
+                            .ifPresent(userBalance -> userBalance.setPrice(userBalance.getPrice() + userTransaction.getAmount()));
+                });
     }
 
     @PostConstruct

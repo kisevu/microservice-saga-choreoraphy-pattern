@@ -1,4 +1,5 @@
-package com.ameda.kevin.saga.config;/*
+package com.ameda.kevin.saga.config;
+/*
 *
 @author ameda
 @project saga-choreography-microservice
